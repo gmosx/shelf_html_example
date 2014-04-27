@@ -1,0 +1,6 @@
+bin/
+build/
+pubspec.lock
+packages
+.buildlog
+.*.un~

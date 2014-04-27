@@ -1,0 +1,11 @@
+name: shelf_html_example
+description: A sample Polymer application
+dependencies:
+  logging: any
+  polymer: '>=0.10.0-pre.7'
+  shelf: any
+  shelf_html: any
+  shelf_route: any
+transformers:
+- polymer:
+    entry_points: web/shelf_html_example.html

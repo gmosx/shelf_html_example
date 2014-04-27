@@ -1,0 +1,17 @@
+<polymer-element name="x-card">
+  <template>
+    <link rel="stylesheet" href="card.css">
+    <div class="card">
+      <form id="form">
+        <input type="text" id="entry" />
+        <button id="update-button" on-click="{{submit}}">Update</button>
+      </form>
+      <div id="list">
+        <template repeat="{{e in events}}">
+          <div>{{e['value']}} {{e['time']}} <span data-id="{{e['id']}}" on-click={{delete}}>[x]</span></div>
+        </template>
+      </div>
+    </div>
+  </template>
+  <script type="application/dart;component=1" src="card.dart"></script>
+</polymer-element>
