@@ -1,5 +1,7 @@
 name: shelf_html_example
-description: A sample Polymer application
+version: 0.1.0
+author: George Moschovitis
+description: A sample web application using shelf_html, shelf_route and Polymer.
 dependencies:
   logging: any
   polymer: '>=0.10.0-pre.7'
