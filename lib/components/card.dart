@@ -11,8 +11,7 @@ class CardElement extends PolymerElement {
 
   bool get applyAuthorStyles => true;
 
-  CardElement.created() : super.created() {
-  }
+  CardElement.created() : super.created();
 
   void submit(MouseEvent e) {
     e.preventDefault();

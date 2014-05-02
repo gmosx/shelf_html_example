@@ -9,8 +9,7 @@ import 'package:polymer/polymer.dart';
 class SignInElement extends PolymerElement {
   bool get applyAuthorStyles => true;
 
-  SignInElement.created() : super.created() {
-  }
+  SignInElement.created() : super.created();
 
   void submit() {
     fire('auth', detail: 'dummytoken');
