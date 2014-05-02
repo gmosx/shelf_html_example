@@ -14,7 +14,6 @@ import 'package:shelf_html_example/application.dart';
 @CustomTag('x-app')
 class AppElement extends PolymerElement with Application {
   shelf_html.Local local;
-//  Remote remote;
 
   AppElement.created() : super.created() {
     Logger.root.level = Level.ALL;
@@ -33,8 +32,6 @@ class AppElement extends PolymerElement with Application {
           .addMiddleware(logRequests())
           .addMiddleware(updateContext(this))
           .addHandler(r.handler);
-
-//      remote = new Remote('http://127.0.0.1:8080', this);
 
       local = shelf_html.serve(pipeline);
     });
