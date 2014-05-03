@@ -21,19 +21,22 @@ class AppElement extends PolymerElement with Application {
 
     Polymer.onReady.then((_) {
       final cardPipeline = const Pipeline()
+          .addMiddleware(logRequests())
           .addMiddleware(ensureSignedIn())
           .addHandler(new CardHandler());
 
       final r = router()
-          ..addRoute(new SignInHandler(), path: '/shelf_html_example/web/sign-in')
+          ..addRoute(new SignInHandler(), path: '/sign-in')
           ..addRoute(cardPipeline, path: '/');
 
-      var pipeline = const Pipeline()
+      var handler = const Pipeline()
           .addMiddleware(logRequests())
           .addMiddleware(updateContext(this))
           .addHandler(r.handler);
 
-      local = shelf_html.serve(pipeline);
+// gmosx: use this if you run the example from within Dart Editor.
+//      local = shelf_html.serve(handler, basePath: '/shelf_html_example/web');
+      local = shelf_html.serve(handler);
     });
   }
 }

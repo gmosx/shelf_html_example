@@ -12,7 +12,7 @@ Middleware ensureSignedIn() => (Handler innerHandler) {
         app.userId = int.parse(window.localStorage['user.id']);
       } else {
         // TODO: maybe use other 30x status?
-        return new Response.seeOther('sign-in');
+        return new Response.seeOther('/sign-in');
       }
     }
     return innerHandler(request);
