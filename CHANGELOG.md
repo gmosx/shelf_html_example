@@ -1,6 +1,11 @@
 Changelog
 =========
 
+0.3.0
+-----
+
+* Compatibility with latest polymer version.
+
 0.2.0
 -----
 
